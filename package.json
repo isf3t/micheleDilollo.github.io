@@ -1,0 +1,23 @@
+{
+  "name": "micheledilollo-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Enterprise Portfolio for Michele Dilollo - Cybersecurity Specialist & DFIR Expert",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.4.2",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "tailwindcss": "^4.0.9"
+  }
+}

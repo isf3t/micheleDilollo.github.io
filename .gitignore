@@ -1,0 +1,20 @@
+# Secrets & credentials
+fine-grained-token.txt
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+.astro/
+
+# IDE & OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Loose root documents (official PDF lives in public/cv.pdf)
+/CV_ATS_READY*.pdf

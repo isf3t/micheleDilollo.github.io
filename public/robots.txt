@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://isf3t.github.io/sitemap-index.xml

@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+import SEO from "../components/SEO.astro";
+import ThemeScript from "../components/ThemeScript.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="it" class="dark scroll-smooth">
+  <head>
+    <ThemeScript />
+    <SEO title={title} description={description} />
+    <!-- Modern web fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500/30 selection:text-emerald-200 transition-colors duration-200">
+    <!-- Accessible Skip to Content Link -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-emerald-500 focus:text-slate-950 focus:font-semibold focus:rounded-md focus:shadow-lg"
+    >
+      Salta al contenuto principale
+    </a>
+
+    <div class="relative min-h-screen flex flex-col overflow-x-hidden">
+      <!-- Ambient cybersecurity glow backdrop -->
+      <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-emerald-500/10 via-cyan-500/5 to-transparent blur-3xl opacity-70"></div>
+        <div class="absolute top-[40%] -left-40 w-96 h-96 bg-emerald-500/5 blur-3xl rounded-full"></div>
+        <div class="absolute top-[60%] -right-40 w-96 h-96 bg-cyan-500/5 blur-3xl rounded-full"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-25"></div>
+      </div>
+
+      <slot />
+    </div>
+
+    <!-- Theme switch logic -->
+    <script is:inline>
+      const themeToggleBtns = document.querySelectorAll('[data-theme-toggle]');
+      themeToggleBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.contains('dark');
+          if (isDark) {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+            localStorage.setItem('theme', 'light');
+          } else {
+            document.documentElement.classList.remove('light');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

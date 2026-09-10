@@ -1,0 +1,52 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-12 bg-slate-950 border-t border-slate-900 text-slate-400 font-mono text-xs">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Left Info -->
+      <div class="space-y-1 text-center md:text-left">
+        <div class="text-slate-200 font-semibold">
+          Michele Dilollo <span class="text-emerald-400">•</span> DFIR & Incident Response Expert
+        </div>
+        <p class="text-slate-500 text-[11px]">
+          Progettato con standard enterprise: Static Site Generation, zero JavaScript non necessario, accessibilità WCAG 2.1 AA.
+        </p>
+      </div>
+
+      <!-- Center / Badges -->
+      <div class="flex items-center gap-3 text-[11px]">
+        <span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-emerald-400">
+          Astro 5 SSG
+        </span>
+        <span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-cyan-400">
+          Tailwind CSS v4
+        </span>
+        <span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-indigo-400">
+          WCAG 2.1 AA
+        </span>
+      </div>
+
+      <!-- Right Links -->
+      <div class="flex items-center gap-6 text-slate-400">
+        <a
+          href="https://github.com/isf3t/micheleDilollo.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-emerald-400 transition-colors"
+        >
+          GitHub Repo
+        </a>
+        <a href="#hero" class="hover:text-emerald-400 transition-colors flex items-center gap-1">
+          <span>Torna su</span>
+          <span>↑</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-slate-900/80 text-center text-[11px] text-slate-600">
+      © {currentYear} Michele Dilollo. Tutti i diritti riservati. Tutti i marchi citati appartengono ai rispettivi proprietari.
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,137 @@
+---
+import skillsData from "../data/skills.json";
+---
+
+<section id="skills" class="py-20 border-b border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-12">
+      <div class="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-emerald-400 uppercase mb-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        Matrice Competenze & Toolchain
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-100 font-sans tracking-tight mb-4">
+        Arsenale Tecnologico DFIR, Reverse Engineering & AppSec
+      </h2>
+      <p class="text-slate-400 text-base leading-relaxed">
+        Padroneggio strumenti e metodologie sia sul versante dell'investigazione forense di basso livello che nella creazione di detection engineering e architetture software robuste.
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs (Accessible ARIA Tablist) -->
+    <div
+      role="tablist"
+      aria-label="Categorie Competenze"
+      class="flex flex-wrap gap-2 mb-8 p-1.5 rounded-xl bg-slate-900/60 border border-slate-800 w-fit"
+    >
+      <button
+        type="button"
+        role="tab"
+        aria-selected="true"
+        aria-controls="panel-all"
+        id="tab-all"
+        data-skill-filter="all"
+        class="skill-filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all bg-emerald-500 text-slate-950 shadow-sm"
+      >
+        Tutte le Competenze
+      </button>
+      {skillsData.categories.map((category) => (
+        <button
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls={`panel-${category.id}`}
+          id={`tab-${category.id}`}
+          data-skill-filter={category.id}
+          class="skill-filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-mono font-medium text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all"
+        >
+          {category.name}
+        </button>
+      ))}
+    </div>
+
+    <!-- Skills Grid / Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-grid">
+      {skillsData.categories.map((category) => (
+        <div
+          data-category={category.id}
+          class="skill-category-card flex flex-col justify-between p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-emerald-500/40 hover:bg-slate-900/70 transition-all group"
+        >
+          <div>
+            <!-- Card Header -->
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-lg font-bold text-slate-100 font-mono group-hover:text-emerald-300 transition-colors">
+                {category.name}
+              </h3>
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">
+                {category.skills.length} tools
+              </span>
+            </div>
+
+            <p class="text-xs text-slate-400 mb-5 leading-relaxed">
+              {category.description}
+            </p>
+
+            <!-- Skills Badges List -->
+            <div class="flex flex-wrap gap-2">
+              {category.skills.map((skill) => (
+                <span
+                  class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono transition-colors ${
+                    skill.highlight
+                      ? 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 font-medium'
+                      : 'bg-slate-800/60 text-slate-300 border border-slate-700/60'
+                  }`}
+                >
+                  {skill.highlight && (
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  )}
+                  {skill.name}
+                  <span class="text-[10px] text-slate-500 ml-1">
+                    [{skill.level}]
+                  </span>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <span>Categoria: {category.id.toUpperCase()}</span>
+            <span class="text-emerald-400/80">Active Expertise</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Filter Interactivity Script -->
+<script is:inline>
+  const filterBtns = document.querySelectorAll('.skill-filter-btn');
+  const cards = document.querySelectorAll('.skill-category-card');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetCategory = btn.getAttribute('data-skill-filter');
+
+      // Update ARIA states & visual buttons
+      filterBtns.forEach((b) => {
+        b.setAttribute('aria-selected', 'false');
+        b.classList.remove('bg-emerald-500', 'text-slate-950');
+        b.classList.add('text-slate-300');
+      });
+      btn.setAttribute('aria-selected', 'true');
+      btn.classList.add('bg-emerald-500', 'text-slate-950');
+      btn.classList.remove('text-slate-300');
+
+      // Filter Cards
+      cards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        if (targetCategory === 'all' || category === targetCategory) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>

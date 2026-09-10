@@ -1,0 +1,90 @@
+[
+  {
+    "company": "Telsy S.p.A.",
+    "role": "Incident Responder & DFIR Specialist",
+    "period": "Luglio 2023 – Presente",
+    "location": "Roma, Italia",
+    "type": "Full-time Enterprise",
+    "featured": true,
+    "highlights": [
+      {
+        "area": "Incident Management & Eradicazione Minacce",
+        "description": "Gestione end-to-end di incidenti di sicurezza critici in ambienti enterprise e governativi, conducendo le fasi di triage, isolation, containment, eradication e post-incident recovery."
+      },
+      {
+        "area": "Digital Forensics (Host, Memory & Network)",
+        "description": "Esecuzione di analisi forensi approfondite su sistemi Windows e Linux. Acquisizione ed esame della memoria RAM tramite Volatility; estrazione e timeline analysis dei file di log tramite Hayabusa, Thor e Loki per identificare persistenze e lateral movement."
+      },
+      {
+        "area": "Malware Analysis & Reverse Engineering",
+        "description": "Analisi statica e dinamica di campioni malevoli (ransomware, infostealer, trojan). Identificazione di strategie di obfuscation, evasion e packing, con estrazione di IoC e configurazioni di comunicazione C2 per il tracciamento della Threat Intelligence (CTI)."
+      },
+      {
+        "area": "Threat Hunting & Proactive Security",
+        "description": "Sviluppo e deployment di query di Threat Hunting personalizzate e regole di detection su piattaforme EDR/XDR/SIEM (Falcon CrowdStrike, Microsoft Defender for Endpoint, Trend Micro EDR, QRadar) per neutralizzare attacchi avanzati."
+      }
+    ],
+    "tags": ["Incident Response", "Volatility", "CrowdStrike Falcon", "Hayabusa", "Malware Analysis", "Reverse Engineering", "Threat Hunting", "YARA/Sigma"]
+  },
+  {
+    "company": "Incarichi Accademici",
+    "role": "Docente / Lecturer in Ethical Hacking & Practical Network Defense",
+    "period": "2020 – 2022",
+    "location": "Roma, Italia",
+    "type": "Academic Lecturer",
+    "featured": false,
+    "highlights": [
+      {
+        "area": "Formazione Tecnica Avanzata",
+        "description": "Progettazione ed erogazione di corsi teorico-pratici incentrati su penetration testing (ambienti Linux), tecniche di Privilege Escalation (User-to-Root) e tecniche di analisi forense in ambienti Linux e Windows per la rilevazione tempestiva di minacce."
+      }
+    ],
+    "tags": ["Ethical Hacking", "Privilege Escalation", "Linux Security", "Penetration Testing", "Teaching"]
+  },
+  {
+    "company": "Tiuke S.r.l.",
+    "role": "Software Engineer & Mobile Security Specialist",
+    "period": "Novembre 2019 – Giugno 2023",
+    "location": "Roma, Italia",
+    "type": "Full-time",
+    "featured": false,
+    "highlights": [
+      {
+        "area": "Vulnerability Assessment & Mobile Hardening",
+        "description": "Conduzione di sessioni di Vulnerability Assessment e Penetration Testing (VAPT) su applicazioni mobile, implementando tecniche avanzate di mobile app hardening."
+      },
+      {
+        "area": "GIS & Space Data Integration",
+        "description": "Sviluppo di servizi web modulari mediante Python Flask e integrazione di sistemi GIS/GeoMapping basati su software EUSPA Sentinel per il tracciamento di dati spaziali."
+      },
+      {
+        "area": "NLP & Backend Development",
+        "description": "Sviluppo ed ingegnerizzazione di algoritmi NLP complessi in ambiente Python (spaCy, scikit-learn) per il processing e l'analisi di grandi volumi di dati."
+      },
+      {
+        "area": "Full-Stack & Database Engineering",
+        "description": "Progettazione e manutenzione dell'architettura Front-End (Angular 8-12) e Back-End con integrazione di database relazionali (PostgreSQL, MySQL)."
+      }
+    ],
+    "tags": ["Python", "Mobile VAPT", "App Hardening", "Angular", "EUSPA Sentinel", "PostgreSQL", "spaCy"]
+  },
+  {
+    "company": "SIO S.p.A.",
+    "role": "Software Engineer & Application Security Specialist",
+    "period": "Ottobre 2020 – Ottobre 2022",
+    "location": "Roma, Italia",
+    "type": "Contract",
+    "featured": false,
+    "highlights": [
+      {
+        "area": "NLP & Data Pipeline",
+        "description": "Sviluppo ed ingegnerizzazione di algoritmi NLP complessi in ambiente Python (spaCy, scikit-learn) per il processing e l'analisi di grandi volumi di dati."
+      },
+      {
+        "area": "Full-Stack Architecture",
+        "description": "Progettazione e manutenzione dell'architettura Front-End (Angular 8-12) e Back-End con integrazione di database relazionali (PostgreSQL, MySQL)."
+      }
+    ],
+    "tags": ["Python NLP", "Angular", "scikit-learn", "Database Engineering", "Application Security"]
+  }
+]
