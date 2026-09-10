@@ -25,6 +25,15 @@
 
   html {
     scroll-behavior: smooth;
+    background-color: #020617;
+  }
+
+  body {
+    background-color: #020617;
+  }
+
+  html.light, html.light body {
+    background-color: #f8fafc;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -37,6 +46,14 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+
+  /* Safe SVG defaults */
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    max-width: 100%;
   }
 
   /* Accessible focus indicators */
