@@ -1,0 +1,109 @@
+---
+---
+
+<header class="sticky top-0 z-40 w-full border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <!-- Brand / Identifier -->
+    <a href="#" class="group flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-1">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-mono text-sm font-bold group-hover:border-emerald-400 group-hover:bg-emerald-500/20 transition-all">
+        MD
+      </div>
+      <div class="flex flex-col">
+        <span class="text-sm font-semibold tracking-wide text-slate-100 font-mono group-hover:text-emerald-400 transition-colors">
+          Michele Dilollo
+        </span>
+        <span class="text-[11px] text-slate-400 font-mono flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          DFIR Specialist
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300" aria-label="Navigazione principale">
+      <a href="#about" class="hover:text-emerald-400 transition-colors">Profilo</a>
+      <a href="#skills" class="hover:text-emerald-400 transition-colors">DFIR & Competenze</a>
+      <a href="#experience" class="hover:text-emerald-400 transition-colors">Esperienza</a>
+      <a href="#research" class="hover:text-emerald-400 transition-colors">Tesi & Ricerca</a>
+      <a href="#education" class="hover:text-emerald-400 transition-colors">Formazione</a>
+      <a href="#contact" class="hover:text-emerald-400 transition-colors">Contatti</a>
+    </nav>
+
+    <!-- Actions: Theme Toggle & CV Download -->
+    <div class="flex items-center gap-3">
+      <!-- Dark/Light theme toggle button -->
+      <button
+        type="button"
+        data-theme-toggle
+        aria-label="Cambia tema chiaro/scuro"
+        class="p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800/80 border border-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-emerald-400"
+      >
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="w-4 h-4 hidden dark:block text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="w-4 h-4 block dark:hidden text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
+
+      <!-- ATS CV Download CTA -->
+      <a
+        href="/cv.pdf"
+        download="Michele_Dilollo_CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold font-mono tracking-wide bg-emerald-500/15 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/25 hover:border-emerald-400 transition-all shadow-sm focus-visible:ring-2 focus-visible:ring-emerald-400"
+      >
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <span>CV (PDF)</span>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+        type="button"
+        id="mobile-menu-btn"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Apri menu di navigazione"
+        class="md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800 border border-slate-800"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950 px-4 py-3 space-y-2">
+    <a href="#about" class="block px-3 py-2 rounded-md text-sm text-slate-300 hover:bg-slate-900 hover:text-emerald-400">Profilo</a>
+    <a href="#skills" class="block px-3 py-2 rounded-md text-sm text-slate-300 hover:bg-slate-900 hover:text-emerald-400">DFIR & Competenze</a>
+    <a href="#experience" class="block px-3 py-2 rounded-md text-sm text-slate-300 hover:bg-slate-900 hover:text-emerald-400">Esperienza</a>
+    <a href="#research" class="block px-3 py-2 rounded-md text-sm text-slate-300 hover:bg-slate-900 hover:text-emerald-400">Tesi & Ricerca</a>
+    <a href="#education" class="block px-3 py-2 rounded-md text-sm text-slate-300 hover:bg-slate-900 hover:text-emerald-400">Formazione</a>
+    <a href="#contact" class="block px-3 py-2 rounded-md text-sm text-slate-300 hover:bg-slate-900 hover:text-emerald-400">Contatti</a>
+  </div>
+</header>
+
+<script is:inline>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('hidden');
+    });
+    // Close mobile menu on click
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>

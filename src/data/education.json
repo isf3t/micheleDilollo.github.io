@@ -1,0 +1,34 @@
+[
+  {
+    "degree": "Laurea Magistrale in Cybersecurity",
+    "institution": "Sapienza Università di Roma",
+    "period": "Settembre 2019 – Settembre 2024",
+    "location": "Roma, Italia",
+    "thesis": {
+      "title": "Sviluppo di una rete neurale ad architettura avanzata per la distinzione quantitativa di frammenti di file compressi rispetto a frammenti crittografati, finalizzata all'early detection di attacchi Ransomware",
+      "type": "Tesi Sperimentale",
+      "impact": "Early Ransomware Detection via deep entropy & feature analysis prima dell'attivazione completa della crittografia malevola."
+    },
+    "focus": [
+      "Malware Analysis & Reverse Engineering",
+      "Security Governance & Risk Management",
+      "Ethical Hacking & Privilege Escalation",
+      "Practical Network Defense (IDS/IPS, SIEM)",
+      "Operating Systems & Low-Level Memory Management"
+    ]
+  },
+  {
+    "degree": "Laurea Triennale in Ingegneria Informatica",
+    "institution": "Sapienza Università di Roma",
+    "period": "Settembre 2016 – Settembre 2019",
+    "location": "Roma, Italia",
+    "thesis": null,
+    "focus": [
+      "Fondamenti di Calcolatori Elettronici & Sistemi Operativi",
+      "Reti di Calcolatori & Protocolli di Comunicazione",
+      "Algoritmi, Strutture Dati e Complessità Computazionale",
+      "Ingegneria del Software & Basi di Dati"
+    ],
+    "honors": "Tirocinio formativo ed esperienziale svolto presso il Google Workshop (Settembre 2018 – Marzo 2019)"
+  }
+]

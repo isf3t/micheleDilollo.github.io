@@ -1,0 +1,176 @@
+---
+---
+
+<section id="terminal" class="py-16 border-b border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-between mb-4">
+        <div class="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-emerald-400 uppercase">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          Interactive DFIR Console
+        </div>
+        <span class="text-xs font-mono text-slate-500">Digita <code class="text-emerald-400 font-bold">help</code> per i comandi</span>
+      </div>
+
+      <!-- Terminal Shell Window -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-950 shadow-2xl overflow-hidden font-mono text-xs">
+        <!-- Terminal Header -->
+        <div class="bg-slate-900/90 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            <span class="text-slate-400 text-xs ml-2 font-mono">md-soc-analyst@telsy-dfir:~</span>
+          </div>
+          <button
+            type="button"
+            id="clear-term-btn"
+            class="text-[11px] text-slate-500 hover:text-slate-300 font-mono transition-colors"
+          >
+            [clear screen]
+          </button>
+        </div>
+
+        <!-- Terminal Body / Output -->
+        <div id="terminal-body" class="p-4 sm:p-6 space-y-3 min-h-[220px] max-h-[380px] overflow-y-auto text-slate-300 leading-relaxed">
+          <div class="text-slate-400">
+            Benvenuto nella console DFIR di Michele Dilollo (v2.4). Digita un comando o clicca sui suggerimenti:
+          </div>
+          <div class="flex flex-wrap gap-2 text-[11px] py-1">
+            <button type="button" class="term-quick-cmd px-2 py-0.5 rounded bg-slate-900 text-emerald-400 border border-slate-800 hover:border-emerald-500/50">whoami</button>
+            <button type="button" class="term-quick-cmd px-2 py-0.5 rounded bg-slate-900 text-cyan-400 border border-slate-800 hover:border-cyan-500/50">dfir</button>
+            <button type="button" class="term-quick-cmd px-2 py-0.5 rounded bg-slate-900 text-indigo-400 border border-slate-800 hover:border-indigo-500/50">edr</button>
+            <button type="button" class="term-quick-cmd px-2 py-0.5 rounded bg-slate-900 text-amber-400 border border-slate-800 hover:border-amber-500/50">thesis</button>
+            <button type="button" class="term-quick-cmd px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-600">contact</button>
+          </div>
+          <div id="term-history" class="space-y-2"></div>
+        </div>
+
+        <!-- Terminal Input Line -->
+        <form id="terminal-form" class="bg-slate-900/40 px-4 sm:px-6 py-3 border-t border-slate-800 flex items-center gap-2">
+          <span class="text-emerald-400 font-bold">➜</span>
+          <span class="text-cyan-400 font-semibold">~</span>
+          <input
+            type="text"
+            id="terminal-input"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="digita 'help' o un comando..."
+            aria-label="DFIR Terminal Prompt"
+            class="flex-1 bg-transparent border-none text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-0 font-mono text-xs"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const form = document.getElementById('terminal-form');
+  const input = document.getElementById('terminal-input');
+  const historyEl = document.getElementById('term-history');
+  const clearBtn = document.getElementById('clear-term-btn');
+  const quickCmds = document.querySelectorAll('.term-quick-cmd');
+
+  const commands = {
+    help: `Comandi disponibili:
+  - whoami    : Profilo sintetico e ruolo
+  - dfir      : Metodologie di analisi forense e toolchain (Volatility, Hayabusa)
+  - edr       : Piattaforme EDR/SIEM (CrowdStrike, Defender, QRadar)
+  - telsy     : Attività operative svolte in Telsy S.p.A.
+  - thesis    : Sintesi tesi Magistrale Sapienza su Early Ransomware Detection
+  - contact   : Dettagli di contatto (email, telefono, GitHub)
+  - download  : Download immediato del CV in formato PDF
+  - clear     : Pulisce la schermata della console`,
+
+    whoami: `MICHELE DILOLLO
+Ruolo: Cybersecurity Specialist | Incident Responder & DFIR Expert
+Seniority: 3+ anni IR/DFIR operativo (Enterprise/Gov), 5+ anni Software Engineering
+Location: Roma, Italia | Formazione: Laurea Magistrale in Cybersecurity (Sapienza)`,
+
+    dfir: `TOOLCHAIN FORENSE ATTIVA:
+  • Memory Forensics: Volatility Framework (RAM dumps, process injection, rootkits)
+  • Host/Log Forensics: Hayabusa, Thor, Loki, Plaso, Timesketch
+  • Network: Wireshark, Snort, Suricata, PCAP carving
+  • Reverse Engineering: Analisi statica/dinamica malware, C2 & IoC extraction`,
+
+    edr: `PIATTAFORME EDR / XDR / SIEM:
+  • CrowdStrike Falcon (Hunting queries, containment, real-time response)
+  • Microsoft Defender for Endpoint (KQL hunting, threat analytics)
+  • Trend Micro EDR / IBM QRadar / Cynet`,
+
+    telsy: `TELSY S.P.A. (Luglio 2023 – Presente):
+  • Gestione end-to-end incidenti di sicurezza in contesti enterprise e governativi
+  • Triage, isolation, containment, eradication e post-incident recovery
+  • Analisi forense RAM con Volatility e timeline log con Hayabusa/Thor/Loki
+  • Sviluppo di query custom di Threat Hunting e detection rules`,
+
+    thesis: `TESI MAGISTRALE IN CYBERSECURITY (Sapienza Università di Roma):
+  Titolo: Sviluppo di una rete neurale avanzata per la distinzione di frammenti compressi vs crittografati
+  Obiettivo: Early detection di attacchi Ransomware prima della distruzione irreversibile dei dati.`,
+
+    contact: `CANALI DI CONTATTO:
+  • Email: michele.dlsr@gmail.com
+  • Telefono: +39 346 49 31 516
+  • GitHub: https://github.com/isf3t
+  • LinkedIn: https://www.linkedin.com/in/michele-dilollo-831595176
+  • Portfolio: https://isf3t.github.io`,
+
+    download: `Avvio del download di Michele_Dilollo_CV.pdf...`
+  };
+
+  function executeCmd(cmd) {
+    const raw = cmd.trim().toLowerCase();
+    if (!raw) return;
+
+    if (raw === 'clear') {
+      historyEl.innerHTML = '';
+      return;
+    }
+
+    if (raw === 'download') {
+      const link = document.createElement('a');
+      link.href = '/cv.pdf';
+      link.download = 'Michele_Dilollo_CV.pdf';
+      link.click();
+    }
+
+    const output = commands[raw] || `Comando non riconosciuto: '${raw}'. Digita 'help' per la lista dei comandi.`;
+
+    const entry = document.createElement('div');
+    entry.className = 'pt-2 border-t border-slate-900';
+    entry.innerHTML = `
+      <div class="flex items-center gap-2 text-slate-400">
+        <span class="text-emerald-400 font-bold">➜</span>
+        <span class="text-cyan-400">~</span>
+        <span class="text-slate-100 font-semibold">${raw}</span>
+      </div>
+      <pre class="mt-1 text-slate-300 font-mono text-[11px] whitespace-pre-wrap leading-relaxed">${output}</pre>
+    `;
+
+    historyEl.appendChild(entry);
+    const body = document.getElementById('terminal-body');
+    body.scrollTop = body.scrollHeight;
+  }
+
+  if (form && input) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      executeCmd(input.value);
+      input.value = '';
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      historyEl.innerHTML = '';
+    });
+  }
+
+  quickCmds.forEach((b) => {
+    b.addEventListener('click', () => {
+      const cmd = b.textContent.trim();
+      executeCmd(cmd);
+    });
+  });
+</script>

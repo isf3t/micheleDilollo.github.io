@@ -1,0 +1,70 @@
+{
+  "categories": [
+    {
+      "id": "dfir",
+      "name": "DFIR & Incident Response",
+      "description": "Metodologie di analisi forense, gestione incidenti ed analisi delle evidenze su host e reti.",
+      "skills": [
+        { "name": "Incident Management", "level": "Expert", "highlight": true },
+        { "name": "Memory Forensics (RAM)", "level": "Expert", "highlight": true },
+        { "name": "Host & Network Forensics", "level": "Expert", "highlight": true },
+        { "name": "Threat Hunting", "level": "Expert", "highlight": true },
+        { "name": "Root Cause Analysis (RCA)", "level": "Advanced", "highlight": false },
+        { "name": "Cyber Threat Intelligence (CTI)", "level": "Advanced", "highlight": true }
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Forensics & Analysis Tools",
+      "description": "Strumenti specialistici impiegati per estrazione artefatti, timeline e reverse engineering.",
+      "skills": [
+        { "name": "Volatility Framework", "level": "Expert", "highlight": true },
+        { "name": "Thor & Loki Scanner", "level": "Expert", "highlight": true },
+        { "name": "Hayabusa Log Analysis", "level": "Expert", "highlight": true },
+        { "name": "Wireshark & Network PCAP", "level": "Advanced", "highlight": false },
+        { "name": "Plaso & Timesketch", "level": "Advanced", "highlight": false },
+        { "name": "Docker Forensic Pipelines", "level": "Advanced", "highlight": true }
+      ]
+    },
+    {
+      "id": "edr",
+      "name": "EDR / XDR / SIEM",
+      "description": "Piattaforme enterprise per detection engineering, telemetria e hunting proattivo.",
+      "skills": [
+        { "name": "CrowdStrike Falcon", "level": "Expert", "highlight": true },
+        { "name": "Microsoft Defender for Endpoint", "level": "Expert", "highlight": true },
+        { "name": "Trend Micro EDR", "level": "Advanced", "highlight": false },
+        { "name": "IBM QRadar SIEM", "level": "Advanced", "highlight": false },
+        { "name": "Cynet", "level": "Advanced", "highlight": false },
+        { "name": "Snort / Suricata IDS/IPS", "level": "Advanced", "highlight": false }
+      ]
+    },
+    {
+      "id": "coding",
+      "name": "Linguaggi & Scripting",
+      "description": "Linguaggi di programmazione per automazione, reverse engineering e sviluppo backend.",
+      "skills": [
+        { "name": "Python (Advanced, NLP, Security)", "level": "Expert", "highlight": true },
+        { "name": "C / C++", "level": "Advanced", "highlight": true },
+        { "name": "Assembly (IA32)", "level": "Intermediate", "highlight": false },
+        { "name": "Bash & POSIX Shell", "level": "Advanced", "highlight": false },
+        { "name": "TypeScript / JavaScript", "level": "Advanced", "highlight": false },
+        { "name": "SQL & PostgreSQL", "level": "Advanced", "highlight": false },
+        { "name": "Java", "level": "Intermediate", "highlight": false }
+      ]
+    },
+    {
+      "id": "appsec",
+      "name": "Security & Infrastructure",
+      "description": "Application security, vulnerabilità web/mobile e ambienti infrastrutturali.",
+      "skills": [
+        { "name": "Web App Pentesting (OWASP Top 10)", "level": "Advanced", "highlight": true },
+        { "name": "Mobile App Hardening & VAPT", "level": "Advanced", "highlight": true },
+        { "name": "Docker & Container Security", "level": "Advanced", "highlight": false },
+        { "name": "VMware ESXi", "level": "Intermediate", "highlight": false },
+        { "name": "AWS Cloud Foundations", "level": "Intermediate", "highlight": false },
+        { "name": "Web Frameworks (Flask, Angular, .NET)", "level": "Advanced", "highlight": false }
+      ]
+    }
+  ]
+}

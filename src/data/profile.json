@@ -1,0 +1,41 @@
+{
+  "name": "Michele Dilollo",
+  "role": "Cybersecurity Specialist",
+  "specialization": "Incident Responder & DFIR Expert",
+  "tagline": "Specializzato nella difesa di infrastrutture critiche ed enterprise, eradicazione di minacce complesse (APT, Ransomware) e reverse engineering di malware.",
+  "location": "Roma, Italia",
+  "email": "michele.dlsr@gmail.com",
+  "phone": "+39 346 49 31 516",
+  "portfolioUrl": "https://isf3t.github.io",
+  "github": "https://github.com/isf3t",
+  "linkedin": "https://www.linkedin.com/in/michele-dilollo-831595176",
+  "availability": "Aperto a consulenze di Threat Hunting, Incident Response & collaborazioni DFIR",
+  "stats": [
+    {
+      "value": "3+ Anni",
+      "label": "DFIR & Incident Response Operativa",
+      "description": "Triage, containment ed eradicazione minacce APT e Ransomware"
+    },
+    {
+      "value": "5+ Anni",
+      "label": "Software & AppSec Engineering",
+      "description": "Sviluppo backend, automazione forense, modelli NLP e Full-Stack"
+    },
+    {
+      "value": "Enterprise & Gov",
+      "label": "Contesti Operativi Difesi",
+      "description": "Infrastrutture critiche, SOC/CSIRT e ambienti ad alto rischio"
+    },
+    {
+      "value": "100%",
+      "label": "Approccio Tecnico Evidence-Based",
+      "description": "Memory forensics, timeline analysis e CTI C2 tracking"
+    }
+  ],
+  "about": [
+    "Incident Responder e Cybersecurity Specialist con oltre 3 anni di esperienza operativa avanzata in Incident Response (IR), Digital Forensics (DFIR), Threat Hunting e Malware Analysis, affiancata da un solido background quinquennale nello sviluppo software full-stack.",
+    "Specializzato nella rilevazione, contenimento ed eradicazione di minacce complesse (APT, Ransomware) all'interno di infrastrutture critiche ed enterprise governative.",
+    "Combino una profonda padronanza dell'analisi forense a basso livello (RAM con Volatility, Host e Network) con competenze avanzate di automazione e scripting in Python, consentendo una rapida creazione di strumenti custom per l'analisi dei manufatti e la decodifica di malware.",
+    "Comprovata esperienza nella Threat Intelligence (CTI) e nell'insegnamento universitario/tecnico di pratiche offensive e difensive."
+  ]
+}

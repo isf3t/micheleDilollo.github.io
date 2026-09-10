@@ -1,0 +1,97 @@
+---
+import education from "../data/education.json";
+---
+
+<section id="education" class="py-20 border-b border-slate-800/60 bg-slate-950/40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-12">
+      <div class="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-emerald-400 uppercase mb-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        Istruzione & Percorso Accademico
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-100 font-sans tracking-tight mb-4">
+        Solida Formazione Ingegneristica & Specialistica
+      </h2>
+      <p class="text-slate-400 text-base leading-relaxed">
+        Percorso accademico completato presso l'Università degli Studi di Roma "La Sapienza", arricchito da tirocini specialistici ed eccellenza tecnica.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      {education.map((item) => (
+        <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div>
+                <span class="text-xs font-mono font-semibold text-emerald-400">
+                  {item.period}
+                </span>
+                <h3 class="text-xl font-bold text-slate-100 mt-1">
+                  {item.degree}
+                </h3>
+                <div class="text-sm font-medium text-slate-400 mt-0.5">
+                  {item.institution} • {item.location}
+                </div>
+              </div>
+            </div>
+
+            {item.thesis && (
+              <div class="mb-5 p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+                <div class="text-xs font-mono text-cyan-400 font-semibold mb-1">
+                  {item.thesis.type}
+                </div>
+                <div class="text-sm text-slate-200 font-medium leading-snug mb-2">
+                  "{item.thesis.title}"
+                </div>
+                <div class="text-xs text-slate-400">
+                  {item.thesis.impact}
+                </div>
+              </div>
+            )}
+
+            {item.honors && (
+              <div class="mb-5 p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-300">
+                ★ {item.honors}
+              </div>
+            )}
+
+            <div class="space-y-2">
+              <div class="text-xs font-mono text-slate-500 uppercase">
+                Ambiti di approfondimento:
+              </div>
+              <ul class="space-y-1.5 text-xs text-slate-300 font-mono">
+                {item.focus.map((f) => (
+                  <li class="flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Languages Strip -->
+    <div class="p-6 rounded-xl bg-slate-900/30 border border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-mono font-bold text-xs">
+          IT/EN
+        </div>
+        <div>
+          <div class="text-sm font-semibold text-slate-200 font-mono">Lingue Conosciute</div>
+          <div class="text-xs text-slate-400">Comunicazione tecnica e operativa fluente</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 font-mono text-xs">
+        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 border border-slate-700">
+          Italiano: <strong class="text-emerald-400">Madrelingua</strong>
+        </span>
+        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 border border-slate-700">
+          Inglese: <strong class="text-cyan-400">Professionale (B2)</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
