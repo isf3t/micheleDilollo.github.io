@@ -17,6 +17,7 @@ export const QuickTerminal = () => {
     help: `Comandi disponibili:
   - whoami    : Profilo professionale e ruolo
   - dfir      : Strumenti e metodologie di analisi forense
+  - ctf       : Hackappatoi CTF team (fondatore, ranking CTFtime e challenge)
   - edr       : Piattaforme EDR e SIEM utilizzate
   - telsy     : Attività svolte in Telsy S.p.A.
   - thesis    : Sintesi della tesi magistrale su rilevamento ransomware
@@ -27,7 +28,17 @@ export const QuickTerminal = () => {
     whoami: `MICHELE DILOLLO
 Ruolo: Incident Responder & DFIR Specialist
 Esperienza: 3+ anni in Incident Response e Digital Forensics, 5+ anni nello sviluppo software
+Attività CTF: Fondatore team Hackappatoi (Top 5 IT, 62° al mondo su CTFtime 2022)
 Sede: Roma, Italia | Titolo: Laurea Magistrale in Cybersecurity (Sapienza Università di Roma)`,
+
+    ctf: `HACKAPPATOI CTF TEAM (https://ctftime.org/team/140428):
+  • Ruolo: Fondatore del team & Forensic Challenge Player
+  • Affiliazione: MSc in Cybersecurity, Sapienza Università di Roma
+  • Focus Challenge: Digital Forensics, Memory Dumps, Network PCAP, File Carving
+  • Risultati Storici:
+    - Top 5 in Italia nel ranking annuale CTFtime (2022)
+    - 62° posto nella classifica mondiale globale (2022)
+    - 1° posto a Incognito 3.0, 3° a RITSEC CTF, 4° a Hack The Boo, 5° a DaVinciCTF`,
 
     dfir: `STRUMENTI E METODOLOGIE FORENSI:
   • Analisi Memoria: Volatility 3 (processi sospetti, injection, socket di rete)
@@ -142,7 +153,7 @@ Sede: Roma, Italia | Titolo: Laurea Magistrale in Cybersecurity (Sapienza Univer
 
               {/* Quick suggestion chips */}
               <div className="flex flex-wrap gap-2 py-1">
-                {["whoami", "dfir", "edr", "telsy", "thesis", "contact", "download"].map(
+                {["whoami", "dfir", "ctf", "edr", "telsy", "thesis", "contact", "download"].map(
                   (cmd) => (
                     <button
                       key={cmd}

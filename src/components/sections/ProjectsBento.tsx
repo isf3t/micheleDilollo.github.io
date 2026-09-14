@@ -182,7 +182,7 @@ export const ProjectsBento = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-cyan-400 hover:text-cyan-300 text-xs font-mono font-semibold transition-colors"
                 >
-                  <span>Repository GitHub</span>
+                  <span>{proj.githubUrl.includes("ctftime.org") ? "Profilo CTFtime" : "Repository GitHub"}</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>

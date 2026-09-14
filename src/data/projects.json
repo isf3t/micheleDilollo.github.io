@@ -40,6 +40,23 @@
     "status": "Strumento Operativo"
   },
   {
+    "id": "hackappatoi-ctf-team",
+    "title": "Hackappatoi — Team Accademico CTF",
+    "subtitle": "Fondatore & Forensic Challenge Solver (Sapienza)",
+    "category": "CTF & Competizioni Internazionali",
+    "description": "Fondatore del team accademico di Capture The Flag (CTF) 'Hackappatoi' presso la Sapienza Università di Roma. Partecipazione a competizioni internazionali su CTFtime con focus dedicato alla risoluzione di challenge di Digital Forensics, analisi di dump di memoria, file carving e network forensics.",
+    "impact": "Top 5 team in Italia e 62° posto nel ranking globale mondiale su CTFtime (2022), con piazzamenti sul podio in competizioni internazionali (1° Incognito 3.0, 3° RITSEC CTF, 4° Hack The Boo, 5° DaVinciCTF).",
+    "highlights": [
+      "Risoluzione di challenge forensi (analisi RAM, artefatti di sistema, PCAP)",
+      "Piazzamento Top 5 in Italia e 62° a livello mondiale nel ranking CTFtime 2022",
+      "Coordinamento del team accademico e redazione di writeup tecnici"
+    ],
+    "tags": ["CTF", "Digital Forensics", "CTFtime", "Memory Forensics", "Reverse Engineering", "Hackappatoi"],
+    "featured": false,
+    "githubUrl": "https://ctftime.org/team/140428",
+    "status": "Top 5 Italia (2022)"
+  },
+  {
     "id": "detection-engineering-suite",
     "title": "Regole di Threat Hunting & Detection Engineering",
     "subtitle": "Query KQL e regole comportamentali per ambienti enterprise",

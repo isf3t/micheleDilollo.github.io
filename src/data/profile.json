@@ -36,6 +36,7 @@
     "Sono un Incident Responder specializzato in Digital Forensics (DFIR) e Threat Hunting, con un solido background nello sviluppo software.",
     "Lavoro presso Telsy S.p.A., dove supporto la gestione di incidenti di sicurezza: dal triage iniziale all'isolamento degli asset, fino all'analisi delle cause radice e al ripristino dei sistemi.",
     "Eseguo analisi forensi su sistemi Windows e Linux (RAM tramite Volatility, timeline dei log con Hayabusa e Thor) e analisi statica/dinamica di campioni di malware per estrarre IoC e comunicazioni C2.",
-    "Sviluppo strumenti e script in Python per automatizzare le procedure forensi e integrare regole di detection su piattaforme EDR e SIEM come CrowdStrike Falcon e Microsoft Defender."
+    "Sviluppo strumenti e script in Python per automatizzare le procedure forensi e integrare regole di detection su piattaforme EDR e SIEM come CrowdStrike Falcon e Microsoft Defender.",
+    "Sono il fondatore del team accademico di CTF Hackappatoi (Sapienza Università di Roma), partecipando a competizioni internazionali su CTFtime con focus dedicato alla risoluzione di challenge di Digital Forensics (Top 5 in Italia e 62° al mondo nel 2022)."
   ]
 }

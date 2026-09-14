@@ -17,6 +17,8 @@ export const Hero = () => {
     { title: "Regole YARA & Sigma", category: "Detection Engineering", level: "Expert" },
     { title: "Wireshark & PCAP", category: "Analisi di Rete", level: "Advanced" },
     { title: "Mobile App Assessment", category: "Sicurezza Applicativa", level: "Advanced" },
+    { title: "Hackappatoi CTF Team", category: "CTFtime Team", level: "Founder" },
+    { title: "CTF Forensics & Reversing", category: "Competizioni", level: "Top 5 IT" },
     { title: "Docker & Container", category: "Infrastruttura", level: "Advanced" },
   ];
 
@@ -127,8 +129,8 @@ export const Hero = () => {
       </div>
 
       {/* Infinite Technology Moving Cards */}
-      <div className="w-full mt-12 relative z-10">
-        <InfiniteMovingCards items={tickerItems} speed="normal" />
+      <div className="w-full mt-12 relative z-10 flex justify-center overflow-hidden">
+        <InfiniteMovingCards items={tickerItems} speed="normal" className="w-full" />
       </div>
     </section>
   );
