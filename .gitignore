@@ -9,6 +9,10 @@ node_modules/
 # Build artifacts
 dist/
 .astro/
+.next/
+out/
+legacy_portfolio_backup.tar.gz
+.antigravity-sandbox/
 
 # IDE & OS
 .DS_Store
