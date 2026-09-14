@@ -1,93 +1,93 @@
 [
   {
     "id": "ransomware-early-detection",
-    "title": "Early Detection di Ransomware tramite Reti Neurali Avanzate",
-    "subtitle": "Tesi Magistrale Sperimentale — Sapienza Università di Roma",
-    "category": "AI & Threat Detection",
-    "description": "Ingegnerizzazione e addestramento di una rete neurale ad architettura avanzata per la discriminazione quantitativa ad alta precisione tra frammenti di dati compressi e crittografati, mitigando i limiti storici dell'entropia di Shannon (~8 bit/byte) per bloccare i ransomware prima dell'esecuzione irreversibile del blocco file.",
-    "impact": "Rilevazione tempestiva pre-encryption con interruzione anticipata della kill-chain e allerta CSIRT/SOC.",
+    "title": "Early Detection di Ransomware tramite Reti Neurali",
+    "subtitle": "Tesi di Laurea Magistrale — Sapienza Università di Roma",
+    "category": "Ricerca & Machine Learning",
+    "description": "Sviluppo di un modello di classificazione per distinguere frammenti di file compressi da frammenti crittografati. L'approccio affronta il limite dell'entropia di Shannon (entrambe le tipologie presentano valori prossimi a 8 bit/byte) con l'obiettivo di identificare processi ransomware nelle prime fasi di cifratura dei dati.",
+    "impact": "Possibilità di rilevare l'attività di cifratura anomala sui blocchi disco prima che l'attacco sia completato.",
     "highlights": [
-      "Discriminazione statistica non lineare e correlazioni di ordine superiore",
-      "Analisi dei limiti dell'entropia Shannon standard sui formati compresso/cifrato",
-      "Pipeline di ingestion a blocchi raw con latenza di inferenza minimizzata"
+      "Analisi statistica delle distribuzioni di byte oltre la semplice entropia",
+      "Addestramento e test del modello su dataset di file compressi e cifrati",
+      "Pipeline di elaborazione per blocchi I/O del file system"
     ],
     "pipeline": [
-      { "step": "01", "name": "Ingestion", "detail": "Frammentazione stream I/O a blocchi raw" },
-      { "step": "02", "name": "Statistical Features", "detail": "Test di casualità & analisi di ordine superiore" },
-      { "step": "03", "name": "Neural Inference", "detail": "Classificazione ad alta confidenza Compressed vs Encrypted" },
-      { "step": "04", "name": "Kill-Chain Breaker", "detail": "Trigger isolamento host & alert CSIRT immediato" }
+      { "step": "01", "name": "Campionamento I/O", "detail": "Lettura dei blocchi disco in fase di scrittura" },
+      { "step": "02", "name": "Estrazione Feature", "detail": "Calcolo di distribuzioni statistiche e pattern di byte" },
+      { "step": "03", "name": "Classificazione", "detail": "Distinzione tra blocchi compressi e crittografati" },
+      { "step": "04", "name": "Segnalazione", "detail": "Generazione alert per il sistema di difesa o per il SOC" }
     ],
-    "tags": ["Neural Networks", "Deep Learning", "Shannon Entropy", "Ransomware Defense", "Python", "Early Detection"],
+    "tags": ["Machine Learning", "Python", "Ransomware Detection", "Analisi Statistica", "Cybersecurity"],
     "featured": true,
     "githubUrl": "https://github.com/isf3t",
-    "status": "Academic Research & Production Prototype"
+    "status": "Tesi Sperimentale & Prototipo"
   },
   {
     "id": "dfir-memory-forensics",
-    "title": "Memory Forensics Automation & Volatility Toolchain",
-    "subtitle": "Automated Triage & Extraction Pipeline",
-    "category": "DFIR & Forensics",
-    "description": "Framework di automazione per il caricamento ed esame rapido di memory dump (RAM) Windows e Linux. Automatizza l'esecuzione dei plugin di Volatility 3 per individuare code injection, unlinked DLL, processi nascosti, socket di rete attivi e artefatti di lateral movement.",
-    "impact": "Riduzione del tempo di analisi RAM da ore a minuti, con report forense strutturato e correlazione IoC automatica.",
+    "title": "Automazione Analisi Memory Forensics",
+    "subtitle": "Script e pipeline basate su Volatility 3",
+    "category": "Digital Forensics",
+    "description": "Raccolta di script in Python per automatizzare il triage di dump di memoria RAM su sistemi Windows e Linux. Permette di velocizzare l'esecuzione dei plugin principali di Volatility 3, identificando processi anomali, injection di codice e connessioni di rete.",
+    "impact": "Riduzione dei tempi di estrazione e analisi preliminare degli artefatti in memoria.",
     "highlights": [
-      "Estrazione automatizzata di injected threads (Malfind) e hook kernel",
-      "Correlazione timeline mem/disk con integrazione Hayabusa & Loki",
-      "Generazione automatica di indicatori YARA su dump estratti"
+      "Esecuzione strutturata dei plugin Volatility (pslist, malfind, netscan)",
+      "Parsing degli output e correlazione automatica degli indicatori (IoC)",
+      "Integrazione con scanner di log (Hayabusa) e regole YARA"
     ],
-    "tags": ["Volatility 3", "Memory Forensics", "Python", "Threat Hunting", "Kernel Analysis", "Hayabusa"],
+    "tags": ["Volatility 3", "Python", "Memory Forensics", "Incident Response", "Windows Internals"],
     "featured": false,
     "githubUrl": "https://github.com/isf3t",
-    "status": "Operational Toolkit"
+    "status": "Strumento Operativo"
   },
   {
     "id": "detection-engineering-suite",
-    "title": "Enterprise Threat Hunting & Detection Engineering Suite",
-    "subtitle": "Regole di Telemetria Avanzata per EDR / XDR / SIEM",
+    "title": "Regole di Threat Hunting & Detection Engineering",
+    "subtitle": "Query KQL e regole comportamentali per ambienti enterprise",
     "category": "Detection Engineering",
-    "description": "Libreria di query di hunting proattivo e regole comportamentali testate in ambienti enterprise ad alta criticità su piattaforme CrowdStrike Falcon (Falcon Query Language), Microsoft Defender for Endpoint (KQL) e formati standard Sigma/YARA.",
-    "impact": "Copertura delle matrici MITRE ATT&CK per Privilege Escalation, Credential Dumping (LSASS) e Defense Evasion.",
+    "description": "Sviluppo e test di query di hunting e regole di rilevamento per Microsoft Defender for Endpoint (KQL) e CrowdStrike Falcon, con riferimento al framework MITRE ATT&CK. Focus su tecniche di persistenza, privilege escalation ed evasione delle difese.",
+    "impact": "Miglioramento della copertura di telemetria e supporto alle attività di hunting periodico.",
     "highlights": [
-      "Hunting rules KQL per Microsoft Defender for Endpoint",
-      "Query comportamentali real-time per Falcon CrowdStrike",
-      "Traduzione e validazione continuativa di regole Sigma in query EDR"
+      "Query KQL per monitorare comportamenti sospetti di processi e script",
+      "Regole Sigma pronte alla conversione per diverse piattaforme SIEM",
+      "Mappatura metodologica sulle tecniche MITRE ATT&CK"
     ],
-    "tags": ["CrowdStrike Falcon", "KQL", "Microsoft Defender", "Sigma Rules", "YARA", "MITRE ATT&CK"],
+    "tags": ["Microsoft Defender", "KQL", "CrowdStrike Falcon", "Sigma Rules", "Threat Hunting"],
     "featured": false,
     "githubUrl": "https://github.com/isf3t",
-    "status": "Enterprise Deployed"
+    "status": "Attività Operativa"
   },
   {
     "id": "mobile-vapt-hardening",
-    "title": "Mobile App Hardening & Security Assessment Framework",
-    "subtitle": "Defense against Reverse Engineering & Hooking",
-    "category": "AppSec & Mobile",
-    "description": "Metodologia ed engine di verifica per la protezione di applicazioni mobile Android e iOS: rilevamento di hooking dinamico (Frida), root/jailbreak detection, tamper resistance e crittografia di storage locale in conformità con OWASP MASVS.",
-    "impact": "Mitigazione di attacchi di reverse engineering ed estrazione non autorizzata di token e API secrets.",
+    "title": "Assessment di Sicurezza Applicazioni Mobile",
+    "subtitle": "Verifica e hardening secondo standard OWASP MASVS",
+    "category": "Mobile Security",
+    "description": "Metodologia e script per il testing di applicazioni Android e iOS: verifica della memorizzazione sicura dei dati, controllo delle protezioni da root/jailbreak e test di resilienza a strumenti di hooking dinamico come Frida.",
+    "impact": "Individuazione di vulnerabilità nella gestione di token, credenziali e logica applicativa client-side.",
     "highlights": [
-      "Anti-Frida detection e controllo dell'integrità del runtime",
-      "Verifica crittografica conforme OWASP Mobile Top 10",
-      "Testing automatizzato con pipeline CI/CD mobile"
+      "Test di resistenza a strumenti di dynamic instrumentation (Frida)",
+      "Verifica della configurazione delle comunicazioni TLS e certificate pinning",
+      "Valutazione della conformità rispetto ai requisiti OWASP MASVS"
     ],
-    "tags": ["Mobile Security", "Frida", "Reverse Engineering", "AppSec", "OWASP MASVS", "Android/iOS"],
+    "tags": ["Mobile Security", "Frida", "Android", "iOS", "OWASP MASVS"],
     "featured": false,
     "githubUrl": "https://github.com/isf3t",
-    "status": "Validated Framework"
+    "status": "Framework di Test"
   },
   {
     "id": "sentinel-gis-integration",
-    "title": "EUSPA Sentinel Earth Observation Geospatial Pipelines",
-    "subtitle": "Modular GIS & Space Data Microservices",
-    "category": "Data Engineering & GIS",
-    "description": "Architettura di microservizi in Python Flask per l'ingestion, processing e mappatura di telemetria satellitare e geospatial data provenienti dalla costellazione europea EUSPA Sentinel, integrata con database PostgreSQL/PostGIS e front-end reattivi.",
-    "impact": "Processing scalabile di grossi volumi di dati spaziali e rendering geo-referenziato in tempo reale.",
+    "title": "Servizi di Integrazione Dati Satellitari EUSPA Sentinel",
+    "subtitle": "Backend e microservizi per dati geospaziali",
+    "category": "Software Engineering & GIS",
+    "description": "Progettazione di servizi web in Python Flask per l'acquisizione, gestione e consultazione di dati cartografici e satellitari del programma europeo EUSPA Sentinel, con persistenza su database PostgreSQL/PostGIS.",
+    "impact": "Elaborazione e visualizzazione efficiente di informazioni territoriali e geografiche.",
     "highlights": [
-      "Pipeline di ingestion per dati satellitari Sentinel",
-      "Integrazione PostGIS per query spaziali ad alte prestazioni",
-      "API RESTful per servizi di monitoraggio ambientale e cartografico"
+      "API REST in Flask per l'accesso e il filtraggio dei dataset spaziali",
+      "Ottimizzazione delle query geospaziali tramite PostGIS",
+      "Integrazione con frontend dedicati per la visualizzazione cartografica"
     ],
-    "tags": ["Python", "Flask", "EUSPA Sentinel", "GIS", "PostGIS", "Satellite Data"],
+    "tags": ["Python", "Flask", "PostgreSQL", "PostGIS", "GIS", "Sentinel"],
     "featured": false,
     "githubUrl": "https://github.com/isf3t",
-    "status": "Production Architecture"
+    "status": "Servizio Backend"
   }
 ]

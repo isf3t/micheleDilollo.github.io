@@ -71,7 +71,7 @@ export const FloatingNav = ({
             <div className="w-7 h-7 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
               <Shield className="w-3.5 h-3.5" />
             </div>
-            <span className="hidden sm:inline-block">MD<span className="text-emerald-400">.</span>DFIR</span>
+            <span className="hidden sm:inline-block">Michele Dilollo</span>
           </a>
 
           {/* Desktop Nav Items */}
@@ -95,7 +95,7 @@ export const FloatingNav = ({
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-emerald-500/20 border border-emerald-500/40 text-emerald-300 hover:text-emerald-200 hover:border-emerald-400 font-mono text-xs font-semibold transition-all hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>CV <span className="hidden sm:inline">ATS-Ready</span></span>
+              <span>Scarica CV</span>
             </a>
 
             {/* Mobile hamburger button */}

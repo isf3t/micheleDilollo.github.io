@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import profile from "@/data/profile.json";
-import { Download, Terminal, Shield, ArrowDown, ChevronRight, Activity, ExternalLink } from "lucide-react";
+import { Download, Terminal, ChevronRight } from "lucide-react";
 
 export const Hero = () => {
   const tickerItems = [
-    { title: "Volatility Framework", category: "Memory Forensics", level: "Expert" },
+    { title: "Volatility Framework", category: "Analisi Memoria RAM", level: "Expert" },
     { title: "CrowdStrike Falcon", category: "EDR / XDR", level: "Expert" },
     { title: "Microsoft Defender ATP", category: "Threat Hunting", level: "Expert" },
-    { title: "Hayabusa & Thor", category: "Timeline Analysis", level: "Expert" },
-    { title: "Python Security & ML", category: "Automation", level: "Expert" },
-    { title: "Reverse Engineering", category: "Malware Analysis", level: "Advanced" },
-    { title: "YARA & Sigma Rules", category: "Detection Eng.", level: "Expert" },
-    { title: "Wireshark PCAP", category: "Network DFIR", level: "Advanced" },
-    { title: "Mobile VAPT", category: "AppSec Hardening", level: "Advanced" },
-    { title: "Docker DFIR Pipelines", category: "Infrastructure", level: "Advanced" },
+    { title: "Hayabusa & Thor", category: "Analisi Log & Eventi", level: "Expert" },
+    { title: "Python per la Sicurezza", category: "Automazione & Scripting", level: "Expert" },
+    { title: "Malware Analysis", category: "Analisi Campioni", level: "Advanced" },
+    { title: "Regole YARA & Sigma", category: "Detection Engineering", level: "Expert" },
+    { title: "Wireshark & PCAP", category: "Analisi di Rete", level: "Advanced" },
+    { title: "Mobile App Assessment", category: "Sicurezza Applicativa", level: "Advanced" },
+    { title: "Docker & Container", category: "Infrastruttura", level: "Advanced" },
   ];
 
   return (
@@ -36,7 +36,7 @@ export const Hero = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span className="tracking-wide">CSIRT & SOC Operativo</span>
+          <span className="tracking-wide">Incident Responder &amp; DFIR Specialist</span>
           <span className="text-slate-600">•</span>
           <span className="text-slate-300">Telsy S.p.A.</span>
         </motion.div>
@@ -80,7 +80,7 @@ export const Hero = () => {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold tracking-wide transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:-translate-y-0.5"
           >
             <Download className="w-4 h-4" />
-            <span>Download CV ATS-Ready</span>
+            <span>Scarica CV (PDF)</span>
           </a>
 
           <a
@@ -88,14 +88,14 @@ export const Hero = () => {
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700/80 hover:border-cyan-500/50 transition-all hover:-translate-y-0.5"
           >
             <Terminal className="w-4 h-4 text-cyan-400" />
-            <span>Console DFIR Interattiva</span>
+            <span>Console DFIR</span>
           </a>
 
           <a
             href="#projects"
             className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:border-slate-700 transition-all hover:-translate-y-0.5"
           >
-            <span>Esplora Progetti</span>
+            <span>Progetti e Ricerca</span>
             <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
           </a>
         </motion.div>

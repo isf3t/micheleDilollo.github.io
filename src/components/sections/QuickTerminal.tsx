@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { Terminal, Send, Trash2, Shield, Download, Sparkles } from "lucide-react";
+import { Send, Trash2 } from "lucide-react";
 
 interface CommandLog {
   command: string;
@@ -14,41 +14,41 @@ export const QuickTerminal = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const commandsMap: Record<string, string> = {
-    help: `Comandi DFIR operativi disponibili:
-  - whoami    : Profilo sintetico e ruolo
-  - dfir      : Metodologie di analisi forense e toolchain (Volatility, Hayabusa)
-  - edr       : Piattaforme EDR/SIEM (CrowdStrike Falcon, Defender, QRadar)
-  - telsy     : Attività operative svolte in Telsy S.p.A.
-  - thesis    : Sintesi tesi Magistrale Sapienza su Early Ransomware Detection
-  - contact   : Dettagli di contatto (email, telefono, GitHub, LinkedIn)
-  - download  : Download immediato del CV in formato PDF ATS-Ready
+    help: `Comandi disponibili:
+  - whoami    : Profilo professionale e ruolo
+  - dfir      : Strumenti e metodologie di analisi forense
+  - edr       : Piattaforme EDR e SIEM utilizzate
+  - telsy     : Attività svolte in Telsy S.p.A.
+  - thesis    : Sintesi della tesi magistrale su rilevamento ransomware
+  - contact   : Recapiti di contatto
+  - download  : Download del CV in formato PDF
   - clear     : Pulisce la schermata della console`,
 
     whoami: `MICHELE DILOLLO
-Ruolo: Cybersecurity Specialist | Incident Responder & DFIR Expert
-Seniority: 3+ anni IR/DFIR operativo (Enterprise/Gov), 5+ anni Software Engineering
-Location: Roma, Italia | Formazione: Laurea Magistrale in Cybersecurity (Sapienza)`,
+Ruolo: Cybersecurity Specialist | Incident Responder & DFIR Specialist
+Esperienza: 3+ anni in Incident Response e Digital Forensics, 5+ anni nello sviluppo software
+Sede: Roma, Italia | Titolo: Laurea Magistrale in Cybersecurity (Sapienza Università di Roma)`,
 
-    dfir: `TOOLCHAIN FORENSE ATTIVA:
-  • Memory Forensics: Volatility Framework (RAM dumps, process injection, rootkits)
-  • Host/Log Forensics: Hayabusa, Thor, Loki, Plaso, Timesketch
-  • Network: Wireshark, Snort, Suricata, PCAP carving
-  • Reverse Engineering: Analisi statica/dinamica malware, C2 & IoC extraction`,
+    dfir: `STRUMENTI E METODOLOGIE FORENSI:
+  • Analisi Memoria: Volatility 3 (processi sospetti, injection, socket di rete)
+  • Analisi Host & Log: Hayabusa, Thor, Loki, Plaso, Timesketch
+  • Analisi di Rete: Wireshark, Snort, Suricata, analisi file PCAP
+  • Analisi Malware: Analisi statica e dinamica in sandbox, estrazione IoC`,
 
-    edr: `PIATTAFORME EDR / XDR / SIEM:
-  • CrowdStrike Falcon (Hunting queries, containment, real-time response)
-  • Microsoft Defender for Endpoint (KQL hunting, threat analytics)
-  • Trend Micro EDR / IBM QRadar / Cynet`,
+    edr: `PIATTAFORME EDR / SIEM:
+  • CrowdStrike Falcon (Query di hunting, isolamento host, telemetria)
+  • Microsoft Defender for Endpoint (Query KQL, analisi degli alert)
+  • Trend Micro EDR / IBM QRadar`,
 
     telsy: `TELSY S.P.A. (Luglio 2023 – Presente):
-  • Gestione end-to-end incidenti di sicurezza in contesti enterprise e governativi
-  • Triage, isolation, containment, eradication e post-incident recovery
-  • Analisi forense RAM con Volatility e timeline log con Hayabusa/Thor/Loki
-  • Sviluppo di query custom di Threat Hunting e detection rules`,
+  • Supporto operativo alla gestione degli incidenti di sicurezza
+  • Triage, isolamento degli endpoint compromessi e contenimento
+  • Analisi forense della memoria RAM e ricostruzione di timeline eventi
+  • Scrittura di query di hunting e regole di rilevamento`,
 
-    thesis: `TESI MAGISTRALE IN CYBERSECURITY (Sapienza Università di Roma):
-  Titolo: Sviluppo di una rete neurale avanzata per la distinzione di frammenti compressi vs crittografati
-  Obiettivo: Early detection di attacchi Ransomware prima della distruzione irreversibile dei dati.`,
+    thesis: `TESI DI LAUREA MAGISTRALE (Sapienza Università di Roma):
+  Titolo: Sviluppo di una rete neurale per la distinzione di frammenti compressi vs crittografati
+  Obiettivo: Rilevamento tempestivo di processi ransomware a livello di blocchi disco.`,
 
     contact: `CANALI DI CONTATTO:
   • Email: michele.dlsr@gmail.com
@@ -57,7 +57,7 @@ Location: Roma, Italia | Formazione: Laurea Magistrale in Cybersecurity (Sapienz
   • LinkedIn: https://www.linkedin.com/in/michele-dilollo-831595176
   • Portfolio: https://isf3t.github.io`,
 
-    download: `Avvio del download di Michele_Dilollo_CV.pdf...`,
+    download: `Download del CV (Michele_Dilollo_CV.pdf) avviato.`,
   };
 
   const handleCommand = (cmd: string) => {
@@ -78,7 +78,7 @@ Location: Roma, Italia | Formazione: Laurea Magistrale in Cybersecurity (Sapienz
 
     const output =
       commandsMap[raw] ||
-      `Comando non riconosciuto: '${raw}'. Digita 'help' per la lista dei comandi disponibili.`;
+      `Comando non riconosciuto: '${raw}'. Digita 'help' per visualizzare i comandi disponibili.`;
 
     setHistory((prev) => [...prev, { command: raw, output }]);
   };
@@ -103,7 +103,7 @@ Location: Roma, Italia | Formazione: Laurea Magistrale in Cybersecurity (Sapienz
           <div className="flex items-center justify-between mb-4">
             <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-emerald-400 uppercase">
               <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-              Console DFIR Interattiva
+              Console DFIR
             </div>
             <span className="text-xs font-mono text-slate-500">
               Digita <code className="text-emerald-400 font-bold">help</code> per i comandi
@@ -118,7 +118,7 @@ Location: Roma, Italia | Formazione: Laurea Magistrale in Cybersecurity (Sapienz
                 <span className="w-3 h-3 rounded-full bg-rose-500/80"></span>
                 <span className="w-3 h-3 rounded-full bg-amber-500/80"></span>
                 <span className="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                <span className="text-slate-400 text-xs ml-2">md-soc-analyst@telsy-dfir:~</span>
+                <span className="text-slate-400 text-xs ml-2">analyst@michele-dfir:~$</span>
               </div>
               <button
                 type="button"
@@ -127,7 +127,7 @@ Location: Roma, Italia | Formazione: Laurea Magistrale in Cybersecurity (Sapienz
                 aria-label="Pulisci terminale"
               >
                 <Trash2 className="w-3 h-3" />
-                <span>[clear screen]</span>
+                <span>[pulisci]</span>
               </button>
             </div>
 
@@ -137,7 +137,7 @@ Location: Roma, Italia | Formazione: Laurea Magistrale in Cybersecurity (Sapienz
               className="p-4 sm:p-6 space-y-4 min-h-[240px] max-h-[400px] overflow-y-auto text-slate-300 leading-relaxed"
             >
               <div className="text-slate-400">
-                Benvenuto nella console DFIR di Michele Dilollo (v2.4). Digita un comando o clicca sui suggerimenti:
+                Console informativa di Michele Dilollo. Digita un comando o clicca sui suggerimenti:
               </div>
 
               {/* Quick suggestion chips */}

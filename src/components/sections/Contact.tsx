@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import profile from "@/data/profile.json";
-import { Mail, Phone, Github, Linkedin, Copy, Check, ExternalLink, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Copy, Check, ExternalLink, ArrowUpRight } from "lucide-react";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export const Contact = () => {
@@ -19,10 +19,10 @@ export const Contact = () => {
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-emerald-400 uppercase mb-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-            Canali di Contatto
+            Contatti
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 font-sans tracking-tight mb-4">
-            Mettiamoci in Contatto
+            Riferimenti di Contatto
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
             {profile.availability}
@@ -40,7 +40,7 @@ export const Contact = () => {
                 <Mail className="w-5 h-5" />
               </div>
               <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
-                Posta Elettronica
+                Email
               </div>
               <div className="text-sm font-semibold text-slate-100 break-all mb-4">
                 {profile.email}
@@ -56,12 +56,12 @@ export const Contact = () => {
                 {copied ? (
                   <>
                     <Check className="w-3.5 h-3.5" />
-                    <span>Indirizzo Copiato!</span>
+                    <span>Email Copiata</span>
                   </>
                 ) : (
                   <>
                     <Copy className="w-3.5 h-3.5" />
-                    <span>Copia Indirizzo</span>
+                    <span>Copia Email</span>
                   </>
                 )}
               </button>
@@ -69,7 +69,7 @@ export const Contact = () => {
                 href={`mailto:${profile.email}`}
                 className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono text-xs transition-colors"
               >
-                <span>Apri Client Mail</span>
+                <span>Invia Email</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
               </a>
             </div>
@@ -85,7 +85,7 @@ export const Contact = () => {
                 <Linkedin className="w-5 h-5" />
               </div>
               <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
-                Rete Professionale
+                LinkedIn
               </div>
               <div className="text-sm font-semibold text-slate-100 mb-4">
                 Michele Dilollo
@@ -99,7 +99,7 @@ export const Contact = () => {
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-mono text-xs font-semibold transition-colors"
               >
-                <span>Connettiti su LinkedIn</span>
+                <span>Profilo LinkedIn</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -115,7 +115,7 @@ export const Contact = () => {
                 <Github className="w-5 h-5" />
               </div>
               <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
-                Codice &amp; Repositories
+                GitHub
               </div>
               <div className="text-sm font-semibold text-slate-100 mb-4">
                 @isf3t
@@ -135,7 +135,7 @@ export const Contact = () => {
             </div>
           </CardSpotlight>
 
-          {/* Direct Phone / Signal */}
+          {/* Direct Phone */}
           <CardSpotlight
             color="#f59e0b"
             className="border-slate-800/80 bg-slate-900/40 p-6 flex flex-col justify-between"
@@ -145,7 +145,7 @@ export const Contact = () => {
                 <Phone className="w-5 h-5" />
               </div>
               <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
-                Recapito Telefonico
+                Telefono
               </div>
               <div className="text-sm font-semibold text-slate-100 mb-4">
                 {profile.phone}
@@ -157,7 +157,7 @@ export const Contact = () => {
                 href={`tel:${profile.phone.replace(/\s+/g, '')}`}
                 className="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 font-mono text-xs font-semibold transition-colors"
               >
-                <span>Chiama Ora</span>
+                <span>Chiama</span>
                 <Phone className="w-3.5 h-3.5" />
               </a>
             </div>

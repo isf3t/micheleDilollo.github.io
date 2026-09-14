@@ -4,42 +4,42 @@
     "role": "Incident Responder & DFIR Specialist",
     "period": "Luglio 2023 – Presente",
     "location": "Roma, Italia",
-    "type": "Full-time Enterprise",
+    "type": "Full-time",
     "featured": true,
     "highlights": [
       {
-        "area": "Incident Management & Eradicazione Minacce",
-        "description": "Gestione end-to-end di incidenti di sicurezza critici in ambienti enterprise e governativi, conducendo le fasi di triage, isolation, containment, eradication e post-incident recovery."
+        "area": "Incident Response & Gestione Incidenti",
+        "description": "Gestione operativa di incidenti di sicurezza su infrastrutture enterprise: triage iniziale, isolamento degli endpoint compromessi, analisi delle cause e supporto alle fasi di ripristino."
       },
       {
-        "area": "Digital Forensics (Host, Memory & Network)",
-        "description": "Esecuzione di analisi forensi approfondite su sistemi Windows e Linux. Acquisizione ed esame della memoria RAM tramite Volatility; estrazione e timeline analysis dei file di log tramite Hayabusa, Thor e Loki per identificare persistenze e lateral movement."
+        "area": "Analisi Forense (Host, Memoria & Log)",
+        "description": "Analisi forense su sistemi operativi Windows e Linux: esame di dump di memoria RAM tramite Volatility 3, ricostruzione di timeline e analisi dei registri eventi tramite Hayabusa e Thor."
       },
       {
-        "area": "Malware Analysis & Reverse Engineering",
-        "description": "Analisi statica e dinamica di campioni malevoli (ransomware, infostealer, trojan). Identificazione di strategie di obfuscation, evasion e packing, con estrazione di IoC e configurazioni di comunicazione C2 per il tracciamento della Threat Intelligence (CTI)."
+        "area": "Malware Analysis & Threat Intelligence",
+        "description": "Analisi statica e dinamica di campioni malevoli in ambiente isolato (sandbox), estrazione di indicatori di compromissione (IoC) e identificazione delle tecniche di comunicazione con server C2."
       },
       {
-        "area": "Threat Hunting & Proactive Security",
-        "description": "Sviluppo e deployment di query di Threat Hunting personalizzate e regole di detection su piattaforme EDR/XDR/SIEM (Falcon CrowdStrike, Microsoft Defender for Endpoint, Trend Micro EDR, QRadar) per neutralizzare attacchi avanzati."
+        "area": "Threat Hunting & Detection Engineering",
+        "description": "Creazione e validazione di query di ricerca e regole di alert per piattaforme EDR e SIEM (CrowdStrike Falcon, Microsoft Defender for Endpoint, IBM QRadar) basate su scenari MITRE ATT&CK."
       }
     ],
-    "tags": ["Incident Response", "Volatility", "CrowdStrike Falcon", "Hayabusa", "Malware Analysis", "Reverse Engineering", "Threat Hunting", "YARA/Sigma"]
+    "tags": ["Incident Response", "Volatility", "CrowdStrike Falcon", "Hayabusa", "Malware Analysis", "Threat Hunting", "YARA/Sigma"]
   },
   {
-    "company": "Incarichi Accademici",
-    "role": "Docente / Lecturer in Ethical Hacking & Practical Network Defense",
+    "company": "Incarichi Didattici",
+    "role": "Docente in Sicurezza Informatica & Reti",
     "period": "2020 – 2022",
     "location": "Roma, Italia",
-    "type": "Academic Lecturer",
+    "type": "Attività Didattica",
     "featured": false,
     "highlights": [
       {
-        "area": "Formazione Tecnica Avanzata",
-        "description": "Progettazione ed erogazione di corsi teorico-pratici incentrati su penetration testing (ambienti Linux), tecniche di Privilege Escalation (User-to-Root) e tecniche di analisi forense in ambienti Linux e Windows per la rilevazione tempestiva di minacce."
+        "area": "Formazione Tecnica",
+        "description": "Pianificazione ed erogazione di lezioni ed esercitazioni di laboratorio su penetration testing in ambiente Linux, gestione delle configurazioni di sicurezza e basi di analisi forense."
       }
     ],
-    "tags": ["Ethical Hacking", "Privilege Escalation", "Linux Security", "Penetration Testing", "Teaching"]
+    "tags": ["Linux", "Sicurezza di Rete", "Penetration Testing", "Didattica", "Analisi Forense"]
   },
   {
     "company": "Tiuke S.r.l.",
@@ -50,41 +50,41 @@
     "featured": false,
     "highlights": [
       {
-        "area": "Vulnerability Assessment & Mobile Hardening",
-        "description": "Conduzione di sessioni di Vulnerability Assessment e Penetration Testing (VAPT) su applicazioni mobile, implementando tecniche avanzate di mobile app hardening."
+        "area": "Sicurezza Applicazioni Mobile",
+        "description": "Esecuzione di vulnerability assessment su applicazioni mobile Android e supporto all'applicazione di misure di hardening del codice e dei dati memorizzati."
       },
       {
-        "area": "GIS & Space Data Integration",
-        "description": "Sviluppo di servizi web modulari mediante Python Flask e integrazione di sistemi GIS/GeoMapping basati su software EUSPA Sentinel per il tracciamento di dati spaziali."
+        "area": "Integrazione Dati Geospaziali (GIS)",
+        "description": "Sviluppo di API e servizi web in Python Flask per la consultazione e il processamento di dati satellitari del programma EUSPA Sentinel con database PostgreSQL/PostGIS."
       },
       {
-        "area": "NLP & Backend Development",
-        "description": "Sviluppo ed ingegnerizzazione di algoritmi NLP complessi in ambiente Python (spaCy, scikit-learn) per il processing e l'analisi di grandi volumi di dati."
+        "area": "Sviluppo Backend & Pipeline Dati",
+        "description": "Implementazione di script e pipeline in Python per il parsing, la normalizzazione e l'elaborazione di dataset complessi."
       },
       {
-        "area": "Full-Stack & Database Engineering",
-        "description": "Progettazione e manutenzione dell'architettura Front-End (Angular 8-12) e Back-End con integrazione di database relazionali (PostgreSQL, MySQL)."
+        "area": "Sviluppo Front-End & Database",
+        "description": "Sviluppo di componenti per interfacce utente in Angular (versioni 8-12) e progettazione di schemi di database relazionali (PostgreSQL, MySQL)."
       }
     ],
-    "tags": ["Python", "Mobile VAPT", "App Hardening", "Angular", "EUSPA Sentinel", "PostgreSQL", "spaCy"]
+    "tags": ["Python", "Flask", "Mobile Security", "Angular", "PostgreSQL", "PostGIS", "GIS"]
   },
   {
     "company": "SIO S.p.A.",
     "role": "Software Engineer & Application Security Specialist",
     "period": "Ottobre 2020 – Ottobre 2022",
     "location": "Roma, Italia",
-    "type": "Contract",
+    "type": "Consulenza",
     "featured": false,
     "highlights": [
       {
-        "area": "NLP & Data Pipeline",
-        "description": "Sviluppo ed ingegnerizzazione di algoritmi NLP complessi in ambiente Python (spaCy, scikit-learn) per il processing e l'analisi di grandi volumi di dati."
+        "area": "Sviluppo Software & Analisi Dati",
+        "description": "Sviluppo di moduli in Python per l'elaborazione e la strutturazione di grandi volumi di dati a supporto dei servizi aziendali."
       },
       {
-        "area": "Full-Stack Architecture",
-        "description": "Progettazione e manutenzione dell'architettura Front-End (Angular 8-12) e Back-End con integrazione di database relazionali (PostgreSQL, MySQL)."
+        "area": "Applicazioni Web & Database",
+        "description": "Collaborazione allo sviluppo di funzionalità frontend in Angular e gestione di interrogazioni ottimizzate su database relazionali."
       }
     ],
-    "tags": ["Python NLP", "Angular", "scikit-learn", "Database Engineering", "Application Security"]
+    "tags": ["Python", "Angular", "Database Engineering", "Application Security", "SQL"]
   }
 ]

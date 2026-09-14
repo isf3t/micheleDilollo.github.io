@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import education from "@/data/education.json";
-import { GraduationCap, Award, BookOpen, CheckCircle, Calendar, MapPin } from "lucide-react";
+import { GraduationCap, Award, Calendar, MapPin } from "lucide-react";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export const Education = () => {
@@ -11,13 +11,13 @@ export const Education = () => {
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-cyan-400 uppercase mb-2">
             <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-            Formazione Accademica &amp; Workshop
+            Istruzione e Formazione
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 font-sans tracking-tight mb-4">
-            Percorso Universitario &amp; Certificazioni
+            Formazione Accademica
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Solide basi teorico-scientifiche in Ingegneria Informatica e specializzazione magistrale in Cybersecurity presso la Sapienza Università di Roma, con tirocinio formativo Google Workshop.
+            Laurea Magistrale in Cybersecurity e Laurea Triennale in Ingegneria Informatica conseguite presso la Sapienza Università di Roma, con tirocinio formativo Google Workshop.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export const Education = () => {
                 {/* Focus list */}
                 <div className="space-y-2">
                   <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">
-                    Discipline Chiave:
+                    Materie Principali:
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {edu.focus.map((item, fIdx) => (

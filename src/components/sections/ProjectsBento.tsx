@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import projects from "@/data/projects.json";
-import { ExternalLink, GitBranch, Cpu, ShieldAlert, Binary, Search, Smartphone, Globe, ArrowUpRight } from "lucide-react";
+import { ExternalLink, GitBranch, ArrowUpRight } from "lucide-react";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export const ProjectsBento = () => {
@@ -15,13 +15,13 @@ export const ProjectsBento = () => {
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-cyan-400 uppercase mb-2">
             <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-            Progetti, Ricerca &amp; Case Studies
+            Progetti &amp; Ricerca
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 font-sans tracking-tight mb-4">
-            Ingegneria Difensiva &amp; Ricerca Sperimentale Applicata
+            Progetti Selezionati e Ricerca Accademica
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Dalla discriminazione quantitativa per l&apos;early detection di Ransomware alla creazione di toolchain forensi e regole di Threat Hunting enterprise su scala governativa.
+            Panoramica della ricerca svolta per la tesi magistrale, degli strumenti sviluppati per l&apos;analisi forense e delle attività di threat hunting e detection engineering.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export const ProjectsBento = () => {
             <div className="lg:col-span-7 space-y-6">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-mono text-xs font-semibold">
-                  Tesi Sperimentale Magistrale
+                  Tesi di Laurea Magistrale
                 </span>
                 <span className="px-3 py-1 rounded-md bg-slate-800/80 text-slate-300 font-mono text-xs">
                   Sapienza Università di Roma
@@ -47,14 +47,14 @@ export const ProjectsBento = () => {
               <div className="space-y-3 text-slate-300 text-sm leading-relaxed">
                 <p>{featured.description}</p>
                 <div className="p-3.5 rounded-xl bg-cyan-950/20 border border-cyan-500/20 text-cyan-200 text-xs">
-                  <strong>Impatto Operativo:</strong> {featured.impact}
+                  <strong>Obiettivo:</strong> {featured.impact}
                 </div>
               </div>
 
               {/* Highlights */}
               <div className="space-y-2">
                 <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">
-                  Innovazioni Metodologiche:
+                  Aspetti Tecnici:
                 </div>
                 <ul className="space-y-1.5 text-xs text-slate-300">
                   {featured.highlights?.map((h, i) => (
@@ -95,8 +95,8 @@ export const ProjectsBento = () => {
             {/* Pipeline Architecture Diagram */}
             <div className="lg:col-span-5 bg-slate-950/80 rounded-xl border border-slate-800 p-5 font-mono text-xs text-slate-300 space-y-4">
               <div className="text-cyan-400 font-semibold text-xs border-b border-slate-800 pb-2 flex items-center justify-between">
-                <span>PIPELINE D&apos;INFERENZA NEURALE</span>
-                <span className="text-[10px] text-slate-500">v2.4_RELEASE</span>
+                <span>FASE DI ANALISI E CLASSIFICAZIONE</span>
+                <span className="text-[10px] text-slate-500">PROTOTIPO</span>
               </div>
 
               <div className="space-y-3">
@@ -121,7 +121,7 @@ export const ProjectsBento = () => {
           </div>
         </div>
 
-        {/* Bento Grid for Other Case Studies */}
+        {/* Bento Grid for Other Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {others.map((proj) => (
             <CardSpotlight
@@ -151,7 +151,7 @@ export const ProjectsBento = () => {
                 </p>
 
                 <div className="mb-4 p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 text-[11px] text-slate-300">
-                  <strong className="text-emerald-400">Impatto:</strong> {proj.impact}
+                  <strong className="text-emerald-400">Beneficio:</strong> {proj.impact}
                 </div>
 
                 <ul className="space-y-1 mb-4 text-[11px] text-slate-400">
@@ -182,7 +182,7 @@ export const ProjectsBento = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-cyan-400 hover:text-cyan-300 text-xs font-mono font-semibold transition-colors"
                 >
-                  <span>Codice &amp; Dettagli</span>
+                  <span>Repository GitHub</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>

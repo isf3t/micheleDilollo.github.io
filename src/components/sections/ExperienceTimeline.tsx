@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import experiences from "@/data/experiences.json";
-import { Briefcase, Calendar, MapPin, CheckCircle2, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, CheckCircle2 } from "lucide-react";
 
 export const ExperienceTimeline = () => {
   return (
@@ -13,10 +13,10 @@ export const ExperienceTimeline = () => {
             Esperienze Professionali
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 font-sans tracking-tight mb-4">
-            Cronologia Operativa Enterprise &amp; Docenze
+            Percorso Lavorativo &amp; Incarichi
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Un percorso solido maturato nella gestione di incidenti critici per infrastrutture governative, affiancato da attività di sviluppo software full-stack e formazione tecnica universitaria.
+            Attività nell&apos;ambito dell&apos;Incident Response e della Digital Forensics in Telsy S.p.A., affiancata da esperienze pregresse nello sviluppo software full-stack e nella docenza tecnica.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export const ExperienceTimeline = () => {
                       </h3>
                       {exp.featured && (
                         <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 uppercase">
-                          Ruolo Attuale
+                          Posizione Attuale
                         </span>
                       )}
                       <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-400">

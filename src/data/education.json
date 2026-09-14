@@ -5,16 +5,16 @@
     "period": "Settembre 2019 – Settembre 2024",
     "location": "Roma, Italia",
     "thesis": {
-      "title": "Sviluppo di una rete neurale ad architettura avanzata per la distinzione quantitativa di frammenti di file compressi rispetto a frammenti crittografati, finalizzata all'early detection di attacchi Ransomware",
+      "title": "Sviluppo di una rete neurale per la distinzione di frammenti di file compressi rispetto a frammenti crittografati, finalizzata al rilevamento tempestivo di attacchi Ransomware",
       "type": "Tesi Sperimentale",
-      "impact": "Early Ransomware Detection via deep entropy & feature analysis prima dell'attivazione completa della crittografia malevola."
+      "impact": "Studio e sviluppo di un modello di classificazione per individuare attività di cifratura anomala a livello di blocchi disco prima del completamento dell'attacco."
     },
     "focus": [
       "Malware Analysis & Reverse Engineering",
       "Security Governance & Risk Management",
-      "Ethical Hacking & Privilege Escalation",
-      "Practical Network Defense (IDS/IPS, SIEM)",
-      "Operating Systems & Low-Level Memory Management"
+      "Ethical Hacking & Network Defense",
+      "Sistemi di Rilevamento Intrusioni (IDS/IPS, SIEM)",
+      "Sistemi Operativi & Gestione della Memoria"
     ]
   },
   {
@@ -24,11 +24,11 @@
     "location": "Roma, Italia",
     "thesis": null,
     "focus": [
-      "Fondamenti di Calcolatori Elettronici & Sistemi Operativi",
+      "Architettura dei Calcolatori & Sistemi Operativi",
       "Reti di Calcolatori & Protocolli di Comunicazione",
-      "Algoritmi, Strutture Dati e Complessità Computazionale",
-      "Ingegneria del Software & Basi di Dati"
+      "Algoritmi e Strutture Dati",
+      "Ingegneria del Software & Basi di Dati Relazionali"
     ],
-    "honors": "Tirocinio formativo ed esperienziale svolto presso il Google Workshop (Settembre 2018 – Marzo 2019)"
+    "honors": "Tirocinio formativo svolto presso il Google Workshop (Settembre 2018 – Marzo 2019)"
   }
 ]

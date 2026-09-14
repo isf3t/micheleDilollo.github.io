@@ -27,13 +27,13 @@ export const SkillsMatrix = () => {
         <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-emerald-400 uppercase mb-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-            Toolchain &amp; Competenze Core
+            Competenze Tecniche
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 font-sans tracking-tight mb-4">
-            Matrice delle Competenze &amp; Tecnologie Operative
+            Competenze &amp; Tecnologie
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Strumenti forensi specialistici, piattaforme EDR/SIEM enterprise e linguaggi di sviluppo per la threat detection e l&apos;automazione su larga scala.
+            Strumenti di analisi forense, piattaforme EDR e SIEM, linguaggi di programmazione e competenze di sicurezza applicativa.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export const SkillsMatrix = () => {
                 : "bg-slate-900/80 text-slate-400 hover:text-slate-200 border border-slate-800"
             }`}
           >
-            Tutte le Aree
+            Tutte le categorie
           </button>
           {categories.map((cat) => (
             <button
