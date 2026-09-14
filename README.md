@@ -1,6 +1,6 @@
 # Michele Dilollo — Enterprise DFIR Portfolio
 
-> Portfolio personale enterprise ad altissime prestazioni per **Michele Dilollo**, Cybersecurity Specialist & DFIR Expert.
+> Portfolio di **Michele Dilollo**, Incident Responder & DFIR Specialist.
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.x-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org)
 [![Aceternity UI](https://img.shields.io/badge/Aceternity_UI-Components-6366F1?style=flat-square)](https://ui.aceternity.com)

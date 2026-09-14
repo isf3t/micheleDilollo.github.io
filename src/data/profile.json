@@ -1,7 +1,7 @@
 {
   "name": "Michele Dilollo",
-  "role": "Cybersecurity Specialist",
-  "specialization": "Incident Responder & DFIR Specialist",
+  "role": "Incident Responder",
+  "specialization": "DFIR Specialist",
   "tagline": "Specializzato in Incident Response, Digital Forensics (DFIR), Threat Hunting e analisi di malware in ambienti enterprise.",
   "location": "Roma, Italia",
   "email": "michele.dlsr@gmail.com",
@@ -33,7 +33,7 @@
     }
   ],
   "about": [
-    "Sono un Cybersecurity Specialist attivo nell'ambito dell'Incident Response (IR), Digital Forensics (DFIR) e Threat Hunting, con un solido background nello sviluppo software.",
+    "Sono un Incident Responder specializzato in Digital Forensics (DFIR) e Threat Hunting, con un solido background nello sviluppo software.",
     "Lavoro presso Telsy S.p.A., dove supporto la gestione di incidenti di sicurezza: dal triage iniziale all'isolamento degli asset, fino all'analisi delle cause radice e al ripristino dei sistemi.",
     "Eseguo analisi forensi su sistemi Windows e Linux (RAM tramite Volatility, timeline dei log con Hayabusa e Thor) e analisi statica/dinamica di campioni di malware per estrarre IoC e comunicazioni C2.",
     "Sviluppo strumenti e script in Python per automatizzare le procedure forensi e integrare regole di detection su piattaforme EDR e SIEM come CrowdStrike Falcon e Microsoft Defender."

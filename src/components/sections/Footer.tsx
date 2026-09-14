@@ -21,7 +21,7 @@ export const Footer = () => {
                 Michele Dilollo
               </div>
               <div className="text-[11px] text-slate-500">
-                Cybersecurity Specialist &bull; DFIR &bull; Telsy S.p.A.
+                Incident Responder &bull; DFIR Specialist &bull; Telsy S.p.A.
               </div>
             </div>
           </div>

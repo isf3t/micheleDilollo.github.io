@@ -2,7 +2,7 @@
   "name": "micheledilollo-portfolio",
   "version": "2.0.0",
   "private": true,
-  "description": "Enterprise Portfolio for Michele Dilollo - Cybersecurity Specialist & DFIR Expert",
+  "description": "Portfolio di Michele Dilollo - Incident Responder & DFIR Specialist",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

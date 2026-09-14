@@ -9,13 +9,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://isf3t.github.io/micheleDilollo.github.io"),
-  title: "Michele Dilollo | Cybersecurity Specialist & DFIR Specialist",
+  title: "Michele Dilollo | Incident Responder & DFIR Specialist",
   description:
-    "Portfolio professionale di Michele Dilollo: Incident Responder e Digital Forensics Specialist a Roma (Telsy S.p.A.). Esperienza in analisi forense RAM con Volatility, threat hunting, malware analysis e sviluppo software.",
+    "Portfolio professionale di Michele Dilollo: Incident Responder e Digital Forensics Specialist a Roma (Telsy S.p.A.). Esperienza in gestione incidenti, analisi forense RAM con Volatility, threat hunting e sviluppo software.",
   authors: [{ name: "Michele Dilollo", url: "https://github.com/isf3t" }],
   keywords: [
     "Michele Dilollo",
-    "Cybersecurity Specialist",
     "Incident Responder",
     "DFIR Specialist",
     "Digital Forensics",
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "it_IT",
     url: "https://isf3t.github.io/micheleDilollo.github.io/",
-    title: "Michele Dilollo | Cybersecurity Specialist & DFIR Specialist",
+    title: "Michele Dilollo | Incident Responder & DFIR Specialist",
     description:
       "Incident Responder & DFIR Specialist (Telsy S.p.A.). Esperienza in Incident Response, Digital Forensics, threat hunting e sviluppo software.",
     siteName: "Michele Dilollo Portfolio",
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Michele Dilollo | Cybersecurity Specialist & DFIR Specialist",
+    title: "Michele Dilollo | Incident Responder & DFIR Specialist",
     description:
       "Incident Responder & DFIR Specialist (Telsy S.p.A.). Esperienza in Incident Response, Digital Forensics e sviluppo software.",
     images: ["/favicon.svg"],
@@ -90,7 +89,7 @@ const jsonLd = {
     "Application Security",
   ],
   description:
-    "Incident Responder e Cybersecurity Specialist con oltre 3 anni di esperienza operativa in DFIR, analisi forense e threat hunting, affiancata da background nello sviluppo software.",
+    "Incident Responder con oltre 3 anni di esperienza operativa in DFIR, gestione incidenti, analisi forense e threat hunting, affiancata da background nello sviluppo software.",
 };
 
 export default function RootLayout({

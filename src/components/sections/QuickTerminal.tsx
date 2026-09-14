@@ -25,7 +25,7 @@ export const QuickTerminal = () => {
   - clear     : Pulisce la schermata della console`,
 
     whoami: `MICHELE DILOLLO
-Ruolo: Cybersecurity Specialist | Incident Responder & DFIR Specialist
+Ruolo: Incident Responder & DFIR Specialist
 Esperienza: 3+ anni in Incident Response e Digital Forensics, 5+ anni nello sviluppo software
 Sede: Roma, Italia | Titolo: Laurea Magistrale in Cybersecurity (Sapienza Università di Roma)`,
 
